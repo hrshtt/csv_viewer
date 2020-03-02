@@ -1,0 +1,17 @@
+<!-- views/contact.ejs -->
+<br />
+<div>
+  <form method="post" action="/displayfile">
+    <div>
+      <select name="fileName">
+        <% fileNames.forEach(function(file) { %>
+        <option value="<%= file %>"><%= file %></option>
+        <% }); %>
+      </select>
+    </div>
+    <br />
+    <div class="form-actions">
+      <button class="btn" type="submit">WUHUU</button>
+    </div>
+  </form>
+</div>

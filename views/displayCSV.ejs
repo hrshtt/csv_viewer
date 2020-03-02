@@ -1,0 +1,32 @@
+<br />
+<div>
+  <button
+    class="btn"
+    type="submit"
+    onclick="window.location.href = 'displayfile';"
+  >
+    TRY ANOTHER ONE?
+  </button>
+</div>
+<br />
+<table class="table table-inverse">
+  <thead>
+    <tr>
+      <th>Index</th>
+      <% Object.keys(csv_data[0]).forEach(key => { %>
+      <th><%- key %></th>
+      <% }) %>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% csv_data.forEach((row, i) => { %>
+    <tr>
+      <td><%- i+1 %></td>
+      <% Object.keys(csv_data[0]).forEach(key => { %>
+      <td><%- row[key] %></td>
+      <% }) %>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>

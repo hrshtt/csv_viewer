@@ -1,0 +1,21 @@
+{
+  "name": "ek_csv_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hrsht",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parse": "^4.8.6",
+    "csv-parser": "^2.3.2",
+    "csv-parser-sync-plus-promise": "^1.1.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-layout": "^0.1.0",
+    "neat-csv": "^5.2.0",
+    "pug": "^2.0.4"
+  }
+}
