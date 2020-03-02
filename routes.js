@@ -41,6 +41,7 @@ router
       csv_data: csv_data,
       keys: req.body.new_key
     });
+    console.log(typeof req.body.new_key);
   });
 
 module.exports = router;

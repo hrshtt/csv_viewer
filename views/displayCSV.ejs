@@ -25,20 +25,24 @@
   <thead>
     <tr>
       <th>Index</th>
-      <% keys.forEach(key => { %>
+      <% if (typeof keys != "string") { %> <% keys.forEach(key => { %>
       <th><%- key %></th>
-      <% }) %>
+      <% }) %> <% } else { %>
+      <th><%- keys %></th>
+      <% } %>
     </tr>
   </thead>
 
   <tbody>
     <% csv_data.forEach((row, i) => { %>
     <tr>
-      <td><%- i+1 %></td>
-      <% keys.forEach(key => { %>
+      <td>i</td>
+      <% if (typeof keys != "string") { %> <% keys.forEach(key => { %>
       <td><%- row[key] %></td>
-      <% }) %>
+      <% }) %> <% } else { %>
+      <td><%- row[keys] %></td>
+      <% } %>
     </tr>
-    <% }); %>
+    <% }) %>
   </tbody>
 </table>
