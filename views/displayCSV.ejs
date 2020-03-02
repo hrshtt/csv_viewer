@@ -7,13 +7,25 @@
   >
     TRY ANOTHER ONE?
   </button>
+  <br />
+  <br />
+
+  <form method="post" action="/displayCSV">
+    <% Object.keys(csv_data[0]).forEach(key => { %>
+    <input type="checkbox" name="new_key" value="<%- key %>" /> <%- key %> <% })
+    %>
+    <br />
+    <div class="form-actions">
+      <button class="btn" type="submit">Select Column</button>
+    </div>
+  </form>
 </div>
 <br />
 <table class="table table-inverse">
   <thead>
     <tr>
       <th>Index</th>
-      <% Object.keys(csv_data[0]).forEach(key => { %>
+      <% keys.forEach(key => { %>
       <th><%- key %></th>
       <% }) %>
     </tr>
@@ -23,7 +35,7 @@
     <% csv_data.forEach((row, i) => { %>
     <tr>
       <td><%- i+1 %></td>
-      <% Object.keys(csv_data[0]).forEach(key => { %>
+      <% keys.forEach(key => { %>
       <td><%- row[key] %></td>
       <% }) %>
     </tr>
